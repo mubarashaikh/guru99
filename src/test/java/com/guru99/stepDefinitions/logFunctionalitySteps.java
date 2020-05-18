@@ -7,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.PageFactory;
-import sun.jvm.hotspot.debugger.Page;
+
 
 public class logFunctionalitySteps extends BasePage {
     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -33,7 +33,8 @@ public class logFunctionalitySteps extends BasePage {
     }
 
     @When("click on login button")
-    public void click_on_login_button() {
+    public void click_on_login_button() throws InterruptedException {
+        Thread.sleep(4000);
         homePage.clickOnLoginButton();
     }
 
