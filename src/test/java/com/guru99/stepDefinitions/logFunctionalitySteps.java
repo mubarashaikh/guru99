@@ -25,10 +25,11 @@ public class logFunctionalitySteps extends BasePage {
     }
 
     @When("enter valid password")
-    public void enter_valid_password() {
+    public void enter_valid_password() throws InterruptedException {
 
 
         homePage.enterPassword();
+        Thread.sleep(4000);
     }
 
     @When("click on login button")
