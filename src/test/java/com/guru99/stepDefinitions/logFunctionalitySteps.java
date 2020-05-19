@@ -21,15 +21,14 @@ public class logFunctionalitySteps extends BasePage {
 
     @When("enter vaild user name")
     public void enter_vaild_user_name() {
-        String  uId = "mngr261507";
-        homePage.enterUserID(uId);
+        homePage.enterUserID();
     }
 
     @When("enter valid password")
     public void enter_valid_password() {
-        String  password = "jAjEmEd";
 
-        homePage.enterPassword(password);
+
+        homePage.enterPassword();
     }
 
     @When("click on login button")

@@ -20,14 +20,14 @@ public class HomePage extends BasePage {
     @FindBy (css = "body > form:nth-child(21) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)")
     public WebElement userId;
 
-    //public String  uId = "mngr261507";
+    public String  uId = "mngr261507";
 
 
 
-    //public String  password = "jAjEmEd";
+    public String  password = "jAjEmEd";
 
 
-    public void enterUserID (String uId){
+    public void enterUserID (){
 
         userId.clear();
         userId.sendKeys(uId);
@@ -36,7 +36,7 @@ public class HomePage extends BasePage {
  @FindBy (css = "body > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=password]")
  public WebElement userPassword;
 
-    public void enterPassword (String password){
+    public void enterPassword (){
 
         userPassword.clear();
         userPassword.sendKeys(password);
@@ -44,8 +44,8 @@ public class HomePage extends BasePage {
 
     @FindBy (css = "body > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > input[type=submit]:nth-child(1)")
     public WebElement loginButton;
-    public ManagerHomePage clickOnLoginButton (){
-       // Thread.sleep(3000);
+    public ManagerHomePage clickOnLoginButton () throws InterruptedException {
+        Thread.sleep(3000);
         loginButton.click();
         return new ManagerHomePage(driver);
     }
