@@ -22,8 +22,6 @@ public class HomePage extends BasePage {
 
     public String  uId = "mngr261507";
 
-
-
     public String  password = "jAjEmEd";
 
 
@@ -44,10 +42,11 @@ public class HomePage extends BasePage {
 
     @FindBy (css = "body > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > input[type=submit]:nth-child(1)")
     public WebElement loginButton;
-    public ManagerHomePage clickOnLoginButton () {
+
+    /**public ManagerHomePage clickOnLoginButton () {
         //Thread.sleep(3000);
         loginButton.click();
         return new ManagerHomePage(driver);
-    }
+    }*/
 
 }

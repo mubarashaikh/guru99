@@ -34,8 +34,8 @@ public class logFunctionalitySteps extends BasePage {
 
     @When("click on login button")
     public void click_on_login_button() throws InterruptedException {
-        Thread.sleep(4000);
-        homePage.clickOnLoginButton();
+        //Thread.sleep(4000);
+       // homePage.clickOnLoginButton();
     }
 
     @Then("user is logged in")
