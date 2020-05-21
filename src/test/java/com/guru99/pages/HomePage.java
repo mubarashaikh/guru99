@@ -15,38 +15,41 @@ public class HomePage extends BasePage {
 
     }
 
-    // this method implements user name
+    // this implements WebElement user Id on homepage
 
-    @FindBy (css = "body > form:nth-child(21) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) > input:nth-child(1)")
+    @FindBy (name = "uid")
     public WebElement userId;
 
-    public String  uId = "mngr261507";
+    // this implements WebElement user password on homepage
 
-    public String  password = "jAjEmEd";
+     @FindBy (name = "password")
+     public WebElement userPassword;
 
-
-    public void enterUserID (){
-
-        userId.clear();
-        userId.sendKeys(uId);
-    }
-
- @FindBy (css = "body > form > table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type=password]")
- public WebElement userPassword;
-
-    public void enterPassword (){
-
-        userPassword.clear();
-        userPassword.sendKeys(password);
-    }
-
-    @FindBy (css = "body > form > table > tbody > tr:nth-child(3) > td:nth-child(2) > input[type=submit]:nth-child(1)")
+    // this implements WebElement login Botton on homepage
+    @FindBy (name = "btnLogin")
     public WebElement loginButton;
 
-    /**public ManagerHomePage clickOnLoginButton () {
-        //Thread.sleep(3000);
+
+    public void  enterUserId (String uId){
+        //userId.clear();
+        userId.sendKeys(uId);
+        System.out.println(uId);
+    }
+    public void  enterUserPassword (String uPass){
+        //userPassword.clear();
+        userPassword.sendKeys(uPass);
+        System.out.println(uPass);
+    }
+
+    public ManagerHomePage  clickLoginButton (){
         loginButton.click();
         return new ManagerHomePage(driver);
-    }*/
+    }
+
+
+
+    //    public String  uId = "mngr261507";
+//
+//    public String  password = "jAjEmEd";
 
 }
