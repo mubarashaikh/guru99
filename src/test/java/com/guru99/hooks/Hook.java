@@ -17,7 +17,7 @@ public class Hook  extends Browsers {
 
     public void tearDown(){
 
-        closeBrowser();
+        //closeBrowser();
     }
 
 }

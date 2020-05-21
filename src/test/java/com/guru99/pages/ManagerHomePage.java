@@ -14,9 +14,9 @@ public class ManagerHomePage extends BasePage {
 @FindBy(css = "body > div:nth-child(6) > h2")
     private WebElement pageTitle;
 
-   public void userSuccessfullyLogin (){
-        String pageTit = "Guru99 Bank";
-       Assert.assertTrue(pageTitle.getText().equals(pageTit));
+   public void userSuccessfullyLogin (String pTitle){
+        //String pageTit = "Guru99 Bank";
+       Assert.assertTrue(pageTitle.getText().equals(pTitle));
    }
 
 
