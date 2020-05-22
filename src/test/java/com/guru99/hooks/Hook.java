@@ -9,14 +9,11 @@ public class Hook  extends Browsers {
 
     @Before
     public void setup(){
-
-        launchBrowser("Firefox");
+        launchBrowser("Chrome");
     }
 
     @After
-
     public void tearDown(){
-
         closeBrowser();
     }
 
