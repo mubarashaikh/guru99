@@ -14,9 +14,8 @@ public class logFunctionalitySteps extends BasePage {
     ManagerHomePage managerHomePage = PageFactory.initElements(driver, ManagerHomePage.class);
 
 
-    @Given("i navigate to guru{int} HomePage")
-    public void i_navigate_to_guru_HomePage(Integer int1) {
-
+    @Given("i navigate to guru HomePage")
+    public void i_navigate_to_guru_HomePage() {
         launchUrl();
     }
 
@@ -39,7 +38,7 @@ public class logFunctionalitySteps extends BasePage {
 
     @Then("user is successfully logged in and manger page title is displayed as {string}")
     public void user_is_successfully_logged_in_and_manger_page_title_is_displayed_as(String pageTitle) {
-       //managerHomePage.userSuccessfullyLogin(pageTitle);
+       managerHomePage.userSuccessfullyLogin(pageTitle);
     }
 
 
