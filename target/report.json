@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-05-18T18:56:19.408Z",
+        "start_timestamp": "2020-05-21T21:39:16.514Z",
         "before": [
           {
             "result": {
-              "duration": 4852631979,
+              "duration": 9168516800,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 6,
-        "name": "verifying user can successfully login with valid user name and password",
+        "line": 8,
+        "name": "access to application is granted with valid user Id and valid password",
         "description": "",
-        "id": "user-credentials;verifying-user-can-successfully-login-with-valid-user-name-and-password",
+        "id": "user-credentials;access-to-application-is-granted-with-valid-user-id-and-valid-password",
         "after": [
           {
             "result": {
-              "duration": 39630,
+              "duration": 80800,
               "status": "passed"
             },
             "match": {
@@ -35,67 +35,80 @@
         "steps": [
           {
             "result": {
-              "duration": 2362505630,
+              "duration": 3623111300,
               "status": "passed"
             },
-            "line": 8,
-            "name": "i navigate to guru99 webPage",
+            "line": 10,
+            "name": "i navigate to guru homePage",
             "match": {
-              "arguments": [
-                {
-                  "val": "99",
-                  "offset": 18
-                }
-              ],
-              "location": "logFunctionalitySteps.i_navigate_to_guru_webPage(Integer)"
+              "location": "logFunctionalitySteps.i_navigate_to_guru_homePage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 900408081,
+              "duration": 477768200,
               "status": "passed"
             },
-            "line": 9,
-            "name": "enter vaild user name",
+            "line": 11,
+            "name": "i enter valid user id as \"mngr26q1507\"",
             "match": {
-              "location": "logFunctionalitySteps.enter_vaild_user_name()"
+              "arguments": [
+                {
+                  "val": "\"mngr26q1507\"",
+                  "offset": 25
+                }
+              ],
+              "location": "logFunctionalitySteps.i_enter_valid_user_id_as(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 920999385,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "enter valid password",
-            "match": {
-              "location": "logFunctionalitySteps.enter_valid_password()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1353333601,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "click on login button",
-            "match": {
-              "location": "logFunctionalitySteps.click_on_login_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 70083,
+              "duration": 335363400,
               "status": "passed"
             },
             "line": 12,
-            "name": "user is logged in",
+            "name": "i enter valid password as \"jAjEmEd\"",
             "match": {
-              "location": "logFunctionalitySteps.user_is_logged_in()"
+              "arguments": [
+                {
+                  "val": "\"jAjEmEd\"",
+                  "offset": 26
+                }
+              ],
+              "location": "logFunctionalitySteps.i_enter_valid_password_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5543312000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on login button",
+            "match": {
+              "location": "logFunctionalitySteps.i_click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.UnhandledAlertException: Dismissed user prompt dialog: User or Password is not valid: \nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOPZONE\u0027, ip: \u0027192.168.0.25\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 75.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403170909, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 7848, moz:profile: C:\\Users\\shaikh\\AppData\\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 5689efe2-1ea7-47f2-b31d-cba6cfc54afd\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)\r\n\tat com.guru99.pages.ManagerHomePage.userAccessStatus(ManagerHomePage.java:14)\r\n\tat com.guru99.stepDefinitions.logFunctionalitySteps.application_access_is_granted_and_MANAGER_PAGE_Title_message_is_displayed_as(logFunctionalitySteps.java:40)\r\n\tat ✽.Application access is granted and MANAGER PAGE Title message is displayed as \"Guru99 Bank\"(file:src/test/java/com/guru99/features/logFunctionality.feature:14)\r\n",
+              "duration": 100549100,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "Application access is granted and MANAGER PAGE Title message is displayed as \"Guru99 Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Guru99 Bank\"",
+                  "offset": 77
+                }
+              ],
+              "location": "logFunctionalitySteps.application_access_is_granted_and_MANAGER_PAGE_Title_message_is_displayed_as(String)"
             },
             "keyword": "Then "
           }
