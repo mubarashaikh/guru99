@@ -22,17 +22,17 @@ public class logFunctionalitySteps extends BasePage {
     @When("I enter vaild user ID as {string}")
     public void i_enter_vaild_user_ID_as(String validUserId) {
 
-        homePage.enterUserId(validUserId);
+        homePage.enterValidUserId(validUserId);
     }
 
     @When("i enter valid password as {string}")
     public void i_enter_valid_password_as(String validUserPass) {
-        homePage.enterUserPassword(validUserPass);
+        homePage.enterValidUserPassword(validUserPass);
 
     }
 
     @When("i click on login button")
-    public void i_click_on_login_button() {
+    public void i_click_on_login_button() throws InterruptedException {
         homePage.clickLoginButton();
     }
 
@@ -41,8 +41,34 @@ public class logFunctionalitySteps extends BasePage {
        managerHomePage.userSuccessfullyLogin(pageTitle);
     }
 
+        /*
+          / ss2
+        */
 
+    @When("I enter invaild user ID as {string}")
+    public void i_enter_invaild_user_ID_as(String invalidUID) {
 
+        homePage.enterInvalidUserId(invalidUID);
+    }
+    @Then("accesss is not garnted and error message is displayed as {string}")
+    public void accesss_is_not_garnted_and_error_message_is_displayed_as(String errorMessage) {
+
+        homePage.pupUpHandling(errorMessage);
+    }
+
+        /*
+          / ss3
+        */
+
+    @When("i enter invalid password as {string}")
+    public void i_enter_invalid_password_as(String invalidP) {
+        homePage.enterValidUserPassword(invalidP);
+    }
+
+    @When("i click on login button on homePage")
+    public void i_click_on_login_button_on_homePage() {
+        homePage.clickButton();
+    }
 
 
 
