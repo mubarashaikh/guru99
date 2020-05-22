@@ -11,7 +11,8 @@ public class ManagerHomePage extends BasePage {
        this.driver = driver;
 
    }
-@FindBy(css = "body > div:nth-child(6) > h2")
+
+   @FindBy(css = "body > div:nth-child(6) > h2")
     private WebElement pageTitle;
 
    public void userSuccessfullyLogin (String pTitle){
@@ -19,7 +20,19 @@ public class ManagerHomePage extends BasePage {
        Assert.assertTrue(pageTitle.getText().equals(pTitle));
    }
 
+/*
+ss5
+ */
 
+    @FindBy(css = "body > table > tbody > tr > td > table > tbody > tr.heading3 > td")
+    private WebElement mngrId;
+
+    public void verfiyMngrID (String mgrId){
+        //String pageTit = "Guru99 Bank";
+        //System.out.println(mngrId.getText());
+        Assert.assertTrue(mngrId.getText().equals(mgrId));
+
+    }
 
 
 }

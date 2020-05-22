@@ -71,6 +71,14 @@ public class logFunctionalitySteps extends BasePage {
     }
 
 
+            /*
+            ss5
+             */
+
+    @Then("user is successfully logged in and manger ID should be dispalyed as {string}")
+    public void user_is_successfully_logged_in_and_manger_ID_should_be_dispalyed_as(String mgrId) {
+        managerHomePage.verfiyMngrID(mgrId);
+    }
 
 
 
@@ -89,38 +97,4 @@ public class logFunctionalitySteps extends BasePage {
 
 
 
-
-//    @Given("i navigate to guru{int} webPage")
-//    public void i_navigate_to_guru_webPage(Integer int1) {
-//        launchUrl();
-//    }
-//
-//    @When("enter vaild user name")
-//    public void enter_vaild_user_name() {
-//
-//        homePage.enterUserId();
-//    }
-//
-//    @When("enter valid password")
-//    public void enter_valid_password() throws InterruptedException {
-//
-//
-//        homePage.enterPassword();
-//        Thread.sleep(4000);
-//    }
-//
-//    @When("click on login button")
-//    public void click_on_login_button() throws InterruptedException {
-//        //Thread.sleep(4000);
-//       // homePage.clickOnLoginButton();
-//    }
-//
-//    @Then("user is logged in")
-//    public void user_is_logged_in() {
-//
-//    }
-//
-//
-//
-//}
 }

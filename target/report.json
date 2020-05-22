@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-05-22T17:35:12.644Z",
+        "start_timestamp": "2020-05-22T19:03:21.407Z",
         "before": [
           {
             "result": {
-              "duration": 7614449508,
+              "duration": 3507110212,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 43,
-        "name": "User can\u0027t login with invalid user ID and password",
+        "line": 54,
+        "name": "verify manager Id after successfly logined",
         "description": "",
-        "id": "user-credentials;user-can-t-login-with-invalid-user-id-and-password",
+        "id": "user-credentials;verify-manager-id-after-successfly-logined",
         "after": [
           {
             "result": {
-              "duration": 61165,
+              "duration": 860862459,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 2509541363,
+              "duration": 2162505286,
               "status": "passed"
             },
-            "line": 45,
+            "line": 56,
             "name": "i navigate to guru HomePage",
             "match": {
               "location": "logFunctionalitySteps.i_navigate_to_guru_HomePage()"
@@ -47,46 +47,46 @@
           },
           {
             "result": {
-              "duration": 516448951,
+              "duration": 588955305,
               "status": "passed"
             },
-            "line": 46,
-            "name": "I enter invaild user ID as \"Invalid-r2615\"",
+            "line": 57,
+            "name": "I enter vaild user ID as \"mngr261507\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Invalid-r2615\"",
-                  "offset": 27
+                  "val": "\"mngr261507\"",
+                  "offset": 25
                 }
               ],
-              "location": "logFunctionalitySteps.i_enter_invaild_user_ID_as(String)"
+              "location": "logFunctionalitySteps.i_enter_vaild_user_ID_as(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 229371532,
+              "duration": 251879539,
               "status": "passed"
             },
-            "line": 47,
-            "name": "i enter invalid password as \"invalidPass\"",
+            "line": 58,
+            "name": "i enter valid password as \"jAjEmEd\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"invalidPass\"",
-                  "offset": 28
+                  "val": "\"jAjEmEd\"",
+                  "offset": 26
                 }
               ],
-              "location": "logFunctionalitySteps.i_enter_invalid_password_as(String)"
+              "location": "logFunctionalitySteps.i_enter_valid_password_as(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 494587624,
+              "duration": 944637154,
               "status": "passed"
             },
-            "line": 48,
+            "line": 59,
             "name": "i click on login button",
             "match": {
               "location": "logFunctionalitySteps.i_click_on_login_button()"
@@ -95,19 +95,19 @@
           },
           {
             "result": {
-              "duration": 144483914,
+              "duration": 161741416,
               "status": "passed"
             },
-            "line": 49,
-            "name": "accesss is not garnted and error message is displayed as \"User or Password is not valid\"",
+            "line": 60,
+            "name": "user is successfully logged in and manger ID should be dispalyed as \"Manger Id : mngr261507\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"User or Password is not valid\"",
-                  "offset": 57
+                  "val": "\"Manger Id : mngr261507\"",
+                  "offset": 68
                 }
               ],
-              "location": "logFunctionalitySteps.accesss_is_not_garnted_and_error_message_is_displayed_as(String)"
+              "location": "logFunctionalitySteps.user_is_successfully_logged_in_and_manger_ID_should_be_dispalyed_as(String)"
             },
             "keyword": "Then "
           }
