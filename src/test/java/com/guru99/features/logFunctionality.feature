@@ -57,4 +57,4 @@ Feature: user credentials
     When I enter vaild user ID as "mngr261507"
     And i enter valid password as "jAjEmEd"
     And i click on login button
-    Then user is successfully logged in and manger ID should be dispalyed as "Manger Id : mngr261507"
+    Then user is successfully logged in and manger ID should be dispalyed as "Manger I : mngr261507"
