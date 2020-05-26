@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.guru99.runners.TestRunner
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 28.708 s <<< FAILURE! - in com.guru99.runners.TestRunner
-verifying user can successfully login with valid user name and password(user credentials)  Time elapsed: 25.019 s  <<< ERROR!
-java.lang.NoSuchMethodError: com.guru99.pages.HomePage.clickOnLoginButton()Lcom/guru99/pages/ManagerHomePage;
-

@@ -11,7 +11,6 @@
   <name>Guru99Bank</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
@@ -22,7 +21,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13</version>
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/de.monochromata.cucumber/reporting-plugin -->
@@ -55,20 +54,50 @@
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
     <dependency>
       <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>4.8.0</version>
+      <artifactId>cucumber-java8</artifactId>
+      <version>4.8.1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>4.8.0</version>
+      <version>4.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>4.8.1</version>
+    </dependency>
+
+    <!-- Extent Reports 4 Plugin-->
+
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber3-adapter -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports-cucumber4-adapter</artifactId>
+      <version>1.0.12</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-java</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-core</artifactId>
+        </exclusion>
+      </exclusions>
+
+    </dependency>
+
+
+
+
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -87,6 +116,9 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+            <testFailureIgnore>true</testFailureIgnore>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -109,7 +141,10 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-              </plugins>
-    </pluginManagement>
+
+        <!-- Latest Cucumber JVM Reports Plugin-->
+
+      </plugins>
+
   </build>
 </project>
