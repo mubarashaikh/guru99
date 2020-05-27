@@ -16,7 +16,7 @@ import java.io.File;
 
         features = {"src/test/java/com/guru99/features"},
         glue = {"com/guru99/hooks","com/guru99/stepDefinitions"},
-        plugin = { "pretty","json:target/cucumber.json",
+        plugin = { "json:target/cucumber.json","pretty","html:target/htmlReport/report.html",
                 "de.monochromata.cucumber.report.PrettyReports:target/pretty-cucumber",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
