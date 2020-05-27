@@ -20,7 +20,7 @@ public class Hook  extends Browsers {
     public void setUp(Scenario scenario)
     {
         this.scenario = scenario;
-        launchBrowser("Chrome");
+        launchBrowser("fireFox");
     }
 
     @After
