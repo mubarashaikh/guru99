@@ -43,6 +43,13 @@ public class HomePage extends BasePage {
 
     }
 
+    public ManagerHomePage login (String userName, String password) throws InterruptedException {
+
+        enterValidUserId(userName);
+        enterValidUserPassword(password);
+        return clickLoginButton();
+    }
+
     public ManagerHomePage  clickLoginButton () throws InterruptedException {
         //Thread.sleep(4000);
         loginButton.click();

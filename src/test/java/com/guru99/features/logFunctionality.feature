@@ -2,17 +2,23 @@ Feature: user credentials
 
   as a customer
   i want the ability to loging in to website
-
+  
+#  Background:
+#    Given i navigate to guru HomePage
+#    When I enter vaild user ID as "mngr265377"
+#    And i enter valid password as "qAqYzug"
+#    And i click on login button
 ###########################
  # implementing SS1
 
-#  Scenario: User can successfully login with valid user ID and password
-#
-#    Given i navigate to guru HomePage
-#    When I enter vaild user ID as "mngr261507"
-#    And i enter valid password as "jAjEmEd"
-#    And i click on login button
-#    Then user is successfully logged in and manger page title is displayed as "Guru99 Bank"
+
+  Scenario: User can successfully login with valid user ID and password
+
+    Given i navigate to guru HomePage
+    When I enter vaild user ID as "mngr265737"
+    And i enter valid password as "qAqYzug"
+    And i click on login button
+    Then user is successfully logged in and manger page title is displayed as "Guru99 Bank"
 
 
 #######################
@@ -51,10 +57,10 @@ Feature: user credentials
 ##########################
   #  implementing SS5
 
-  Scenario: verify manager Id after successfly logined
-
-    Given i navigate to guru HomePage
-    When I enter vaild user ID as "mngr261507"
-    And i enter valid password as "jAjEmEd"
-    And i click on login button
-    Then user is successfully logged in and manger ID should be dispalyed as "Manger I : mngr261507"
+#  Scenario: verify manager Id after successfly logined
+#
+#    Given i navigate to guru HomePage
+#    When I enter vaild user ID as "mngr261507"
+#    And i enter valid password as "jAjEmEd"
+#    And i click on login button
+#    Then user is successfully logged in and manger ID should be dispalyed as "Manger I : mngr261507"
