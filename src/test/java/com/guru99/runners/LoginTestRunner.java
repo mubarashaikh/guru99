@@ -18,11 +18,11 @@ import java.io.File;
         glue = {"com/guru99/hooks","com/guru99/stepDefinitions"},
         plugin = { "json:target/cucumber.json","pretty","html:target/htmlReport/report.html",
                 "de.monochromata.cucumber.report.PrettyReports:target/pretty-cucumber",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-        }
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+        tags = {"not @ignore"}
 
 )
-public class TestRunner {
+public class LoginTestRunner {
 
 //        //Writing the Extent Reports:
 //        //Add a method writeExtentReport()

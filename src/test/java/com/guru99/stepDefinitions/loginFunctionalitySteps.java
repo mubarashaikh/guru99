@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class logFunctionalitySteps extends BasePage {
+public class loginFunctionalitySteps extends BasePage {
     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
     ManagerHomePage managerHomePage = PageFactory.initElements(driver, ManagerHomePage.class);
 

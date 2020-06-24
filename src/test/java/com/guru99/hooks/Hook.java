@@ -10,7 +10,7 @@ import io.cucumber.java.After;
 import io.cucumber.core.api.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.support.PageFactory;
+
 
 
 import java.text.SimpleDateFormat;
@@ -19,15 +19,13 @@ import java.util.GregorianCalendar;
 public class Hook  extends Browsers {
 
     public Scenario scenario;
-//    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-//    ManagerHomePage managerHomePage = PageFactory.initElements(driver, ManagerHomePage.class);
+
 
     @Before
     public void setUp(Scenario scenario) throws InterruptedException {
         this.scenario = scenario;
        launchBrowser("Chrome");
-//        new BasePage().launchUrl();
-//       managerHomePage = homePage.login("mngr26577","qAqYzug");
+
     }
 
     @After
