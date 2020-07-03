@@ -69,7 +69,7 @@ public class Hook  extends Browsers {
             e.printStackTrace();
         }
 
-        closeBrowser();
+       //closeBrowser();
     }
 
 }

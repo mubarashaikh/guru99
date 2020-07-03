@@ -4,11 +4,9 @@ package com.guru99.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
-import java.io.File;
+
 
 
 @RunWith(Cucumber.class)
@@ -19,7 +17,7 @@ import java.io.File;
         plugin = { "json:target/cucumber.json","pretty","html:target/htmlReport/report.html",
                 "de.monochromata.cucumber.report.PrettyReports:target/pretty-cucumber",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        tags = {"not @ignore"}
+       tags = {"not @ignore","@login"}
 
 )
 public class LoginTestRunner {

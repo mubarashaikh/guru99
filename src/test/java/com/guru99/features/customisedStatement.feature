@@ -3,12 +3,18 @@ Feature: customise statement
   As a manager
   I want to customise customer bank statement
 
+    Background:
+
+    Given i navigate to guru HomePage
+    When I enter vaild user ID as "mngr265737"
+    And i enter valid password as "qAqYzug"
+    And i click on login button
+#####################################################
+
+  @AcceptanceTest
+
   Scenario Outline: Manager can customise bank statement
 
-    Given I navigate to guru homePage
-    When  I enter a valid user ID as “<userID>”
-    And   I enter valid password as “<password>”
-    And   I click on the login button
     And   I click on customised statement
     And   I enter account num as “<account NO>”
     And   I enter from date as “<From Date>”
@@ -16,11 +22,12 @@ Feature: customise statement
     And   I enter  minimum transaction as “<minTransasctionValue>”
     And   I enter number of transaction as   “<NumOfTransactions>”
     And   I click on submit button
-    Then  transactions are displayed as “<transactionDetails>”
+    Then  the customised statement for  “<account>” is displayed
     And   I click on continue button
     And   I click on logout
     And   I click ok on popUp message
 
+#    need double quotation in account to make a single variable of type String
     Examples:
-      | userID   | password | account NO | From Date | To Date   | minTransasctionValue | NumOfTransactions | transactionDetails                                                                  |
-      |mngr265737| qAqYzug  | 80551      | 2020-06-20| 2020-06-21| 0                    |                  7| Transaction Details for Account No: 80551 from Date: 2020-06-20 to: 2020-06-21 80551|
+     | account NO | From Date | To Date   | minTransasctionValue | NumOfTransactions | account                                                           |
+     | 80551      | 13/05/2020| 03/07/2020| 0                    |                  7| "Transaction Details for Account No: 80551 from Date: 2020-05-13 to: 2020-07-03"|

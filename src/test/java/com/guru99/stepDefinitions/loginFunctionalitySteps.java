@@ -81,7 +81,11 @@ public class loginFunctionalitySteps extends BasePage {
     }
 
 
-
+//    @Then("user is successfully logged in and manger page title is displayed as \"Guru{int} Bank")
+//    public void user_is_successfully_logged_in_and_manger_page_title_is_displayed_as_Guru_Bank(Integer int1) {
+//        managerHomePage.verfiyMngrID(String mgrId);
+//    }
+//
 
 
 

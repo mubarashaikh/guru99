@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 public class ManagerHomePage extends BasePage {
-   public ManagerHomePage (WebDriver driver) {
+
+    public ManagerHomePage (WebDriver driver) {
        this.driver = driver;
 
    }
@@ -34,5 +35,24 @@ ss5
 
     }
 
+         /*
+         * customise statement scenarios
+         * */
+
+    @FindBy(css = "body > div:nth-child(7) > div > ul > li:nth-child(14) > a")
+    private WebElement customiseStatment;
+
+
+    public CustomisedStatementInput clickOnCustomiseStatement() throws Exception {
+
+        // scroll
+        ScrollByPixel ();
+        Thread.sleep(4000);
+        customiseStatment.click();
+        return new CustomisedStatementInput(driver);
+
+
+
+    }
 
 }

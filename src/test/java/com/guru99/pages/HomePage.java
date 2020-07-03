@@ -51,7 +51,7 @@ public class HomePage extends BasePage {
     }
 
     public ManagerHomePage  clickLoginButton () throws InterruptedException {
-        //Thread.sleep(4000);
+        Thread.sleep(4000);
         loginButton.click();
         return new ManagerHomePage(driver);
     }
