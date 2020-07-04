@@ -407,6 +407,20 @@ public class BasePage extends Driver {
         System.out.println(element.toString() + " is now retrieved");
         return element;
     }
+
+    /*#############################################################################
+        Uses - This method to enter or send values
+        ###############################################################################*/
+
+    public static void selectDateByJS(WebElement element, String dateVal){
+        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        js.executeScript("arguments[0].setAttribute('value','"+dateVal+"');", element);
+
+    }
+
+
+
+
 }
 
 

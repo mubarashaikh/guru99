@@ -1,6 +1,7 @@
 package com.guru99.pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -42,7 +43,9 @@ ss5
     @FindBy(css = "body > div:nth-child(7) > div > ul > li:nth-child(14) > a")
     private WebElement customiseStatment;
 
-
+    /*
+    * click customised statement
+    * */
     public CustomisedStatementInput clickOnCustomiseStatement() throws Exception {
 
         // scroll
@@ -55,4 +58,24 @@ ss5
 
     }
 
+    /*
+    * logout
+    * */
+
+    @FindBy(css = "body > div:nth-child(7) > div > ul > li:nth-child(15) > a")
+    private WebElement logoutButton;
+
+    public void clickLogout (){
+
+        ScrollByPixel();
+        logoutButton.click();
+
+        // close the popUp message after logout
+
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+
+
+
+    }
 }
