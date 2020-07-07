@@ -7,7 +7,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.Coordinates;
 import org.openqa.selenium.interactions.Locatable;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -55,12 +57,22 @@ public class BasePage extends Driver {
 
     }
 
+    /*#########################################################
+    Uses - This method helps with clicking on element of
+    interest
+    ###########################################################*/
+    public static void clickOnElement(WebElement element) throws Exception
+    {
+        Actions action = new Actions(driver);
+        action.click(element).build().perform();
+
+    }
 
 	/*#########################################################
 	Uses - This method helps you click on an Element
 	###########################################################*/
 
-    public static void javaScript (WebElement element){
+    public static void javaScriptClick (WebElement element){
 
         JavascriptExecutor executor = (JavascriptExecutor)driver;
 
@@ -418,7 +430,7 @@ public class BasePage extends Driver {
 
     }
 
-
+    
 
 
 }

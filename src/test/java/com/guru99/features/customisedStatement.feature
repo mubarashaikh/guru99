@@ -11,8 +11,8 @@ Feature: customise statement
     And i click on login button
 #####################################################
 
-  @AcceptanceTest
-
+#  @AcceptanceTest
+  @ignore
   Scenario Outline: Manager can customise bank statement
 
     And   I click on customised statement
@@ -24,9 +24,9 @@ Feature: customise statement
     And   I click on submit button
     Then  the customised statement for  “<account>” is displayed
     And   I click on continue button
-    And   I click on logout
+    And   I click logout buttton
 
 #    need double quotation in account to make a single variable of type String
     Examples:
      | account NO | From Date | To Date   | minTransasctionValue | NumOfTransactions | account                                                                         |
-     | 80551      | 13/05/2020| 02/07/2020| 0                    |                  7| "Transaction Details for Account No: 80551 from Date: 2020-05-13 to: 2020-07-04"|
+     | 80551      | 13/05/2020| 07/07/2020| 0                    |                  7| "Transaction Details for Account No: 80551 from Date: 2020-05-13 to: 2020-07-07"|

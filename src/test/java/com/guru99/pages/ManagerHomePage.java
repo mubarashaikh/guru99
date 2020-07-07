@@ -6,11 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class ManagerHomePage extends BasePage {
 
     public ManagerHomePage (WebDriver driver) {
        this.driver = driver;
+        PageFactory.initElements(driver, this);
 
    }
 
@@ -36,9 +38,9 @@ ss5
 
     }
 
-         /*
-         * customise statement scenarios
-         * */
+             /*
+             * customise statement scenario
+             * */
 
     @FindBy(css = "body > div:nth-child(7) > div > ul > li:nth-child(14) > a")
     private WebElement customiseStatment;
@@ -78,4 +80,60 @@ ss5
 
 
     }
+
+            /*
+            * deposit scenario
+            * */
+
+    @FindBy(css ="body > div:nth-child(7) > div > ul > li:nth-child(8) > a")
+    private WebElement depositLink;
+
+    public DepositInputPage clickDeposit () throws Exception {
+
+       //ScrollByPixel();
+        //Thread.sleep(5000);
+        /*
+        * tried the below but none worked
+        * will try the javaScript executor to click
+        * there must be a bug
+        * */
+       // depositLink.click();
+        //clickOnElement(depositLink);
+
+        javaScriptClick(depositLink);
+
+        return new DepositInputPage(driver);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
