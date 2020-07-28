@@ -4,22 +4,23 @@ Feature: user credentials
   i want the ability to loging in to website
 
   Background:
-    Given i navigate to guru HomePage
-    When I enter vaild user ID as "mngr265737"
-    And i enter valid password as "qAqYzug"
-    And i click on login button
+
+    Given I navigate to guru HomePage
+    When  I enter valid user ID as "mngr272831"
+    And   I enter valid password as "YqEdutU"
+    And   I click on login button
 ############################
 
-  @login
- # implementing SS1
 
+ # implementing SS1
+  @login
   Scenario: User can successfully login with valid user ID and password
 
 #    Given i navigate to guru HomePage
 #    When I enter vaild user ID as "mngr265737"
 #    And i enter valid password as "qAqYzug"
 #    And i click on login button
-    Then user is successfully logged in and manger ID should be dispalyed as "Guru99 Bank"
+    Then user is successfully logged in and manger ID should be dispalyed as "Manger Id : mngr272831"
 
 #######################
    #implementing SS2

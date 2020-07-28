@@ -14,24 +14,26 @@ public class loginFunctionalitySteps extends BasePage {
     ManagerHomePage managerHomePage = PageFactory.initElements(driver, ManagerHomePage.class);
 
 
-    @Given("i navigate to guru HomePage")
+    @Given("I navigate to guru HomePage")
     public void i_navigate_to_guru_HomePage() {
         launchUrl();
     }
 
-    @When("I enter vaild user ID as {string}")
-    public void i_enter_vaild_user_ID_as(String validUserId) {
+    @When("I enter valid user ID as {string}")
+    public void i_enter_valid_user_ID_as(String validUserId) {
 
         homePage.enterValidUserId(validUserId);
     }
 
-    @When("i enter valid password as {string}")
-    public void i_enter_valid_password_as(String validUserPass) {
-        homePage.enterValidUserPassword(validUserPass);
+    @When("I enter valid password as {string}")
+    public void i_enter_valid_password_as(String password) {
+
+        homePage.enterValidUserPassword(password);
 
     }
 
-    @When("i click on login button")
+
+    @When("I click on login button")
     public void i_click_on_login_button() throws InterruptedException {
         homePage.clickLoginButton();
     }

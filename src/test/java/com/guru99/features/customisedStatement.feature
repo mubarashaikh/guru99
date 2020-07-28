@@ -6,8 +6,8 @@ Feature: customise statement
     Background:
 
     Given i navigate to guru HomePage
-    When I enter vaild user ID as "mngr265737"
-    And i enter valid password as "qAqYzug"
+    When I enter vaild user ID as "mngr272831"
+    And i enter valid password as "YqEdutU"
     And i click on login button
 #####################################################
 

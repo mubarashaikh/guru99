@@ -1,4 +1,4 @@
-Feature: create new account
+Feature: New account
   As a manager
   I want to create new accounts
 

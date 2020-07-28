@@ -47,6 +47,6 @@ Scenario Outline: Manager is able to edit existing customer details
 
   Examples:
 
-    | userId         | password    | CustomerId| CustomerName| Gender| DOB        | Address                              | City      | State       | Pin       | Mobile      | Email                  | confirmationMessage                    |
+    | userId         | password    | CustomerId| CustomerName| Gender| DOB        | Address                              | City      | State       | Pin       | Mobile               | Email                           | confirmationMessage                    |
 
-    | mngr265737     | qAqYzug     |           | Tom Dic     | Male  | 01/01/1990 | 26 Victoria Road, Birmingham, B23 7RL| Birmingham| West Midland| 010100103 | 07846078889 | tomdicson2020@gmail.com| Customer details updated Successfully!!!|
+    | mngr265737     | qAqYzug     |    63842      | george mag     | Male  | 01/01/1989 | 26 Victoria Road, Birmingham, B23 7RL| Birmingham| West Midland| 010100103 | 078460877678 | janetjanex2141@outlook.com| Customer details updated Successfully!!!|
